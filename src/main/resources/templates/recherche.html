@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+ <HTML>
+ 
+  <head>
+  
+	       <div th:replace="head :: myhead"></div>
+	  	  <meta charset="UTF-8" />
+	  
+	  <style type="text/css">
+	  
+	    body{
+  width :auto;
+  font-family: Georgia, serif;
+  }
+ 
+  
+  /* BUTTON */
+	  	form button:hover {
+      color: "#00000" !important;
+	  transform:scale(1.09);
+	  transition:0.5s;
+    }
+
+    form button:active {
+      box-shadow:3px 3px 12px #999;
+	  transform:scale(0.90);
+	  transition:0.5s;
+    }
+	
+	/* CATEGORIE*/
+	
+	.btn-1,.btn-2,.btn-3,.btn-4 {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 30px;
+  background-color:white;
+  text-align: center !important;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  height:150px;
+  width:150px;
+  margin-left:50%;
+ }
+
+
+/* VILLE*/
+
+.btn-10,.btn-11,.btn-12,.btn-13,.btn-14,.btn-15,.btn-16,.btn-17,.btn-18{
+     width :150px;
+     height :45px;
+     /*font-size :30px;*/
+	 color: #000000 !important;
+     text-align :center;
+     line-height: 30px;
+     color: rgba(255,255,255,0.9);
+     border-radius: 50px;
+     background-color :white;
+	 margin-left:0% !important;
+	 margin-top:2%;
+     }
+
+	 
+	 
+	 	/* MARQUE*/
+	
+	.btn-5,.btn-6,.btn-7,.btn-8 {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 30px;
+  text-align: center !important;
+  text-transform: uppercase;
+  transition: 0.5s;
+  line-height: 3px;
+  background-size: 100% auto;
+  color: #000000 !important;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  height:25px;
+  width:150px;
+  margin-left:30%;
+  background-color:white;
+ }
+
+ 
+	  </style>
+	  
+  </head>
+
+ <body> 
+      <div th:replace="header :: myheader"></div>
+ 
+    <div class="container-fluid" style="  overflow: hidden;
+    " >   
+<main style="background-color:#ebfdff !important" >
+
+ <div class="recherche" >
+	 <br> <br> <h5 style="margin-left:10%;margin-top:10px"> Recherche par nom d'article: </h5> <br>
+	  
+	   <form class="form-inline" style="margin-top:-20px">
+          <input class="form-control mr-sm-2" type="search" placeholder="Nom d'article" aria-label="Search" style="margin-left:30%" size="70px">
+          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        </form>
+</div>
+<br> <br> <br>
+
+	  <br> <h5 style="margin-left:10%"> Recherche par catégorie: </h5> <br>
+	  <center>
+	   <form class="form-inline" style="margin-top:-20px">
+	   <div class="row">
+	   <div class="form-row">
+<div id="block1" class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-1"><img src="images/smartphone.png" width="70px" height="70px" style="text-align:center">Téléphone</button>
+</div>	   
+<div id="block2" class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-2"><img src="images/tablette.png" width="70px" height="70px">Tablette</button>
+</div>
+<div id="block3" class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-3"><img src="images/pc.png" width="70px" height="70px" style="text-align:center">PC</button>
+</div>
+<div id="block4" class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-1"><img src="images/speaker.png" width="70px" height="70px">Speaker</button>
+</div>
+
+<div id="block5" class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-4"><img src="images/souris.png" width="70px" height="70px">Souris</button>
+</div>
+
+<div id="block6" class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-3"><img src="images/phone-case.png" width="70px" height="70px">Pochette</button>
+</div>
+
+<div id="block7" class="col-sm-6 col-md-4 col-lg-3">
+       <button type="button" class="btn btn-4"><img src="images/clavier.png" width="70px" height="70px">Clavier</button>
+</div>
+
+<div id="block8" class="col-sm-6 col-md-4 col-lg-3">
+       <button type="button" class="btn btn-2"><img src="images/headphones.png" width="70px" height="70px">Casque</br>Ecouteur</button>
+</div>
+       
+  </div>
+</div>
+ </form>
+ 
+</center>
+  <br> <br> <br>
+  
+ <div class="recherche" style="margin-left:160px">
+	 <br> <h5> Recherche par ville: </h5> <br>
+	   <form class="form-inline" style="margin-top:-20px">
+      <div class="row">
+	   <div class="form-row">
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-10">Rabat</button>
+	   </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-11">Casablanca</button>
+	   </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+       <button type="button" class="btn btn-12">Fes</button>
+       </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-13">Marrakech</button>
+	   </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-14">Oujda</button>
+	   </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+       <button type="button" class="btn btn-15">Agadir</button>
+       </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-16">Kénitra</button>
+	   </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+       <button type="button" class="btn btn-17">Meknes</button>
+	   </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+       <button type="button" class="btn btn-18">Tanger</button>
+	   </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+       <button type="button" class="btn btn-18">Salé</button>
+	   </div>
+	   	   <div class="col-sm-6 col-md-4 col-lg-3">
+       <button type="button" class="btn btn-18">Tétouan</button>
+	   </div>
+	   <div class="col-sm-6 col-md-4 col-lg-3">
+       <button type="button" class="btn btn-18">Jdida</button>
+	   </div>
+	   </div>
+   </div>
+        </form>
+</div>
+<br> <br> <br>
+ <div class="recherche">
+	<br> <h5 style="margin-left:10%"> Recherche par marque: </h5> <br>
+	<center>
+	<form class="form-inline" style="margin-top:-20px">
+	  	   <div class="row">
+	   
+<div id="block1" class="col-sm-6 col-md-4 col-lg-3">
+	   <button type="button" class="btn btn-5">Apple</button>
+	   <button type="button" class="btn btn-6">Samsung</button>
+       <button type="button" class="btn btn-7">Huawei</button>
+	   <button type="button" class="btn btn-8">Asus</button>
+</div>	   
+<div id="block2" class="col-sm-6 col-md-4 col-lg-3" style="margin-left:-40px">
+	   <button type="button" class="btn btn-6">Honor</button>
+	   <button type="button" class="btn btn-7">Oppo</button>
+       <button type="button" class="btn btn-8">Alcatel</button>
+	   <button type="button" class="btn btn-5">HP</button>
+</div>
+<div id="block3" class="col-sm-6 col-md-4 col-lg-3" style="margin-left:-40px">
+	   <button type="button" class="btn btn-7">Sony</button>
+       <button type="button" class="btn btn-8">LG</button>
+       <button type="button" class="btn btn-5">DELL</button>
+	   <button type="button" class="btn btn-6">Lenovo</button>
+
+</div>
+<div id="block2" class="col-sm-6 col-md-4 col-lg-3" style="margin-left:-40px">
+	   <button type="button" class="btn btn-6">Microsoft</button>
+	   <button type="button" class="btn btn-7">Toshiba</button>
+	   <button type="button" class="btn btn-6">Acer</button>
+	   <button type="button" class="btn btn-6">Xiaomi</button>
+</div>
+       
+</div>
+
+        </form>
+		</center>
+</div>
+	
+  </main>  
+  </div>
+       <div th:replace="footer :: myfooter"></div>
+  
+ </body>
+ </HTML>

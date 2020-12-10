@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+ <HTML>
+ 
+  <head>
+	       <div th:replace="head :: myhead"></div>
+
+	  
+<style type="text/css">
+	  
+	   *{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+body{
+ font-family: 'Poppins', sans-serif;	
+}
+
+button{
+ font-family: 'Poppins', sans-serif;
+	
+}
+
+nav{
+	flex:2;
+}
+
+.bg-light{
+    background-color: #d4fdff !important;
+}
+
+.presentation{
+	display:flex;
+	width:90%;
+	margin: auto;
+	min-height: 80vh;
+	align-items: center;
+}
+
+.introduction{
+	flex:1;
+}
+
+.intro-text h1{
+	font-size:40px;
+	font-weight:500;
+	background: linear-gradient(to right, #494964, #6f6f89);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+}
+
+.intro-text p{
+	margin-top:5px;
+	font-size:20px;
+	color:#585772;
+}
+
+.cta{
+	padding:50px 0px 0px 0px; 
+}
+
+.cta-select{
+	border: 2px solid #c36cbb;
+	background:transparent;
+	color: #c36cbb;
+	width:150px;
+	height:50px;
+	cursor:pointer;
+	font-size:16px;
+}
+
+.cta-add{
+	background:#c36cbb;
+	width:150px;
+	height:50px;
+	cursor:pointer;
+	font-size:16px;
+	border:none;
+	color:white;
+	margin: 30px 0px 0px 30px;
+}
+
+
+.cover{
+	flex:1;
+	display:flex;
+	justify-content:center;
+}
+
+.cover img{
+	height:60vh;
+	filter: drop-shadow(0px 10px 6px black);
+	animation: drop 1.5s ease;
+}
+
+.big-circle{
+	position: absolute;
+	top:0px;
+	right:0px;
+    z-index: -1;
+	opacity: 0.5;
+	height:80%;
+}
+
+.mid-circle{
+	position: absolute;
+	top:30%;
+	right:30%;
+    z-index: -1;
+    opacity: 0.4;
+	height:60%;
+}
+
+.small-circle{
+	position: absolute;
+	bottom:0%;
+	left:20%;
+    z-index: -1;
+}
+
+
+@media screen and (max-width: 1024px) {
+	.presentation {
+		flex-direction: column;
+	}
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h1 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 18px;
+	}
+	.cta {
+		padding: 10px 0px 0px 0px;
+	}
+	.laptop-select {
+		bottom: 5%;
+		right: 50%;
+		width: 50%;
+		transform: translate(50%, 5%);
+	}
+	.cover img {
+		height: 100%;
+	}
+	.small-circle,
+	.medium-circle,
+	.big-circle {
+		opacity: 0.2;
+	}
+	
+}  
+	  
+	 </style> 
+  </head>
+
+ <body> 
+      <div th:replace="header :: myheader"></div>
+ 
+    <div class="container-fluid">    
+<main>
+  <section class="presentation">
+   <div class="introduction">
+   
+    <div class="intro-text">
+	 <h1> Plus d'info </h1>
+	  <p>
+	   <b><em>SmarTech</em></b> a pour but de permettre à  ses diffèrents utilisateurs (Vendeur ou Acheteur) dâacheter et de vendre des articles électroniques (Smartphones, Tablettes, PC) et accessoires (Airpods, Écouteurs, Casque, Coque de téléphone, Pochette pour pc).
+	  </p>
+	</div>
+  </div>
+	
+	<div class="cover">
+	<img src="images/Laptop.png" alt="laptop"></img>
+	</div>
+	
+	</section>
+	
+	<img src="images/big-eclipse.svg" alt="" class="big-circle"></img>
+	<img src="images/mid-eclipse.svg" alt="" class="mid-circle"></img>
+	<img src="images/small-eclipse.svg" alt="" class="small-circle"></img>
+	
+  </main>
+  </div>
+     <div th:replace="footer :: myfooter"></div>
+
+ </body>
+ </HTML>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+ 
+  <head>
+
+     <div th:replace="head :: myhead"></div>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     
+   <style type="text/css">
+
+button{
+font-family: 'Poppins', sans-serif;
+ 
+}
+body{
+ font-family: 'Poppins', sans-serif;	
+}
+
+nav{
+ flex:1;
+}
+
+.bg-light{
+ background-color: #d4fdff !important;
+}
+    /* LOGO*/
+#logo{
+ animation: fill 0.5s ease forwards 3.8s;
+}
+
+#logo path:nth-child(1){
+ stroke-dasharray: 495px;
+ stroke-dashoffset: 495px;
+ animation:line-anim 2s ease forwards;
+}
+
+#logo path:nth-child(2){
+ stroke-dasharray: 670px;
+ stroke-dashoffset: 670px;	
+ animation:line-anim 2s ease forwards 0.3s;
+}
+
+#logo path:nth-child(3){
+ stroke-dasharray: 330px;
+ stroke-dashoffset: 330px;
+ animation:line-anim 2s ease forwards 0.6s;	
+}
+
+#logo path:nth-child(4){
+ stroke-dasharray: 250px;
+ stroke-dashoffset: 250px;
+ animation:line-anim 2s ease forwards 0.9s;		
+}
+
+#logo path:nth-child(5){
+ stroke-dasharray: 340px;
+ stroke-dashoffset: 340px;	
+ animation:line-anim 2s ease forwards 1.2s;	
+}
+
+#logo path:nth-child(6){
+ stroke-dasharray: 390px;
+ stroke-dashoffset: 390px;
+ animation:line-anim 2s ease forwards 1.5s;		
+}
+
+#logo path:nth-child(7){
+ stroke-dasharray: 400px;
+ stroke-dashoffset: 400px;	
+ animation:line-anim 2s ease forwards 1.8s;	
+}
+
+#logo path:nth-child(8){
+ stroke-dasharray: 480px;
+ stroke-dashoffset: 480px;	
+ animation:line-anim 2s ease forwards 2.1s;	
+}
+
+@keyframes line-anim{
+ to{
+     stroke-dashoffset:0;
+ }
+}
+
+@keyframes fill{
+ from{
+     fill:transparent;
+ }
+ to{
+     fill: #FBA304;
+ }
+}
+ @keyframes drop{
+ 0%{
+     opacity:0;
+     transform: translateY(-80px);
+ }
+ 100%{
+     opacity:1;
+     transform: translateY(0px);		
+ }
+}
+
+  
+   
+  </style>  
+   </head>
+   <body>
+    <div th:fragment="myheader">
+   
+   <div class="container-fluid">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:#d4fdff !important; height:60px">
+    <a class="navbar-brand" href="smartech" >
+      <img th:src="@{/images/logo.png}" width="70" height="70" class="rounded-circle" alt=""></img>
+	  <svg id="logo" width="100" height="100" viewBox="0 0 723 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.912 113.008C33.288 113.008 27.336 111.856 22.056 109.552C16.872 107.152 12.792 103.888 9.81601 99.76C6.84001 95.536 5.30401 90.688 5.20801 85.216H19.176C19.656 89.92 21.576 93.904 24.936 97.168C28.392 100.336 33.384 101.92 39.912 101.92C46.152 101.92 51.048 100.384 54.6 97.312C58.248 94.144 60.072 90.112 60.072 85.216C60.072 81.376 59.016 78.256 56.904 75.856C54.792 73.456 52.152 71.632 48.984 70.384C45.816 69.136 41.544 67.792 36.168 66.352C29.544 64.624 24.216 62.896 20.184 61.168C16.248 59.44 12.84 56.752 9.96001 53.104C7.17601 49.36 5.78401 44.368 5.78401 38.128C5.78401 32.656 7.17601 27.808 9.96001 23.584C12.744 19.36 16.632 16.096 21.624 13.792C26.712 11.488 32.52 10.336 39.048 10.336C48.456 10.336 56.136 12.688 62.088 17.392C68.136 22.096 71.544 28.336 72.312 36.112H57.912C57.432 32.272 55.416 28.912 51.864 26.032C48.312 23.056 43.608 21.568 37.752 21.568C32.28 21.568 27.816 23.008 24.36 25.888C20.904 28.672 19.176 32.608 19.176 37.696C19.176 41.344 20.184 44.32 22.2 46.624C24.312 48.928 26.856 50.704 29.832 51.952C32.904 53.104 37.176 54.448 42.648 55.984C49.272 57.808 54.6 59.632 58.632 61.456C62.664 63.184 66.12 65.92 69 69.664C71.88 73.312 73.32 78.304 73.32 84.64C73.32 89.536 72.024 94.144 69.432 98.464C66.84 102.784 63 106.288 57.912 108.976C52.824 111.664 46.824 113.008 39.912 113.008Z" stroke="#FBA304" stroke-width="5" mask="url(#path-1-outside-1)"/>
+<path d="M187.5 31.648C193.644 31.648 199.116 32.944 203.916 35.536C208.716 38.032 212.508 41.824 215.292 46.912C218.076 52 219.468 58.192 219.468 65.488V112H206.508V67.36C206.508 59.488 204.54 53.488 200.604 49.36C196.764 45.136 191.532 43.024 184.908 43.024C178.092 43.024 172.668 45.232 168.636 49.648C164.604 53.968 162.588 60.256 162.588 68.512V112H149.628V67.36C149.628 59.488 147.66 53.488 143.724 49.36C139.884 45.136 134.652 43.024 128.028 43.024C121.212 43.024 115.788 45.232 111.756 49.648C107.724 53.968 105.708 60.256 105.708 68.512V112H92.6036V33.088H105.708V44.464C108.3 40.336 111.756 37.168 116.076 34.96C120.492 32.752 125.34 31.648 130.62 31.648C137.244 31.648 143.1 33.136 148.188 36.112C153.276 39.088 157.068 43.456 159.564 49.216C161.772 43.648 165.42 39.328 170.508 36.256C175.596 33.184 181.26 31.648 187.5 31.648Z" stroke="#FBA304" stroke-width="5" mask="url(#path-1-outside-1)"/>
+<path d="M236.067 72.256C236.067 64.192 237.699 57.136 240.963 51.088C244.227 44.944 248.691 40.192 254.355 36.832C260.115 33.472 266.499 31.792 273.507 31.792C280.419 31.792 286.419 33.28 291.507 36.256C296.595 39.232 300.387 42.976 302.883 47.488V33.088H316.131V112H302.883V97.312C300.291 101.92 296.403 105.76 291.219 108.832C286.131 111.808 280.179 113.296 273.363 113.296C266.355 113.296 260.019 111.568 254.355 108.112C248.691 104.656 244.227 99.808 240.963 93.568C237.699 87.328 236.067 80.224 236.067 72.256ZM302.883 72.4C302.883 66.448 301.683 61.264 299.283 56.848C296.883 52.432 293.619 49.072 289.491 46.768C285.459 44.368 280.995 43.168 276.099 43.168C271.203 43.168 266.739 44.32 262.707 46.624C258.675 48.928 255.459 52.288 253.059 56.704C250.659 61.12 249.459 66.304 249.459 72.256C249.459 78.304 250.659 83.584 253.059 88.096C255.459 92.512 258.675 95.92 262.707 98.32C266.739 100.624 271.203 101.776 276.099 101.776C280.995 101.776 285.459 100.624 289.491 98.32C293.619 95.92 296.883 92.512 299.283 88.096C301.683 83.584 302.883 78.352 302.883 72.4Z" stroke="#FBA304" stroke-width="5" mask="url(#path-1-outside-1)"/>
+<path d="M351.38 45.904C353.684 41.392 356.948 37.888 361.172 35.392C365.492 32.896 370.723 31.648 376.867 31.648V45.184H373.411C358.723 45.184 351.38 53.152 351.38 69.088V112H338.276V33.088H351.38V45.904Z" stroke="#FBA304" stroke-width="5" mask="url(#path-1-outside-1)"/>
+<path d="M453.77 11.632V22.288H426.41V112H413.306V22.288H385.802V11.632H453.77Z" stroke="#FBA304" stroke-width="5" mask="url(#path-1-outside-1)"/>
+<path d="M541.901 69.52C541.901 72.016 541.757 74.656 541.469 77.44H478.397C478.877 85.216 481.516 91.312 486.316 95.728C491.212 100.048 497.117 102.208 504.029 102.208C509.693 102.208 514.397 100.912 518.141 98.32C521.981 95.632 524.669 92.08 526.205 87.664H540.317C538.205 95.248 533.981 101.44 527.645 106.24C521.309 110.944 513.437 113.296 504.029 113.296C496.541 113.296 489.821 111.616 483.868 108.256C478.012 104.896 473.404 100.144 470.044 94C466.684 87.76 465.004 80.56 465.004 72.4C465.004 64.24 466.637 57.088 469.901 50.944C473.165 44.8 477.725 40.096 483.581 36.832C489.533 33.472 496.349 31.792 504.029 31.792C511.517 31.792 518.141 33.424 523.901 36.688C529.661 39.952 534.076 44.464 537.148 50.224C540.316 55.888 541.901 62.32 541.901 69.52ZM528.365 66.784C528.365 61.792 527.26 57.52 525.052 53.968C522.844 50.32 519.821 47.584 515.981 45.76C512.237 43.84 508.061 42.88 503.453 42.88C496.829 42.88 491.165 44.992 486.461 49.216C481.853 53.44 479.212 59.296 478.54 66.784H528.365Z" stroke="#FBA304" stroke-width="5" mask="url(#path-1-outside-1)"/>
+<path d="M554.301 72.4C554.301 64.24 555.933 57.136 559.197 51.088C562.461 44.944 566.973 40.192 572.733 36.832C578.589 33.472 585.261 31.792 592.749 31.792C602.445 31.792 610.413 34.144 616.653 38.848C622.989 43.552 627.165 50.08 629.181 58.432H615.069C613.725 53.632 611.085 49.84 607.149 47.056C603.309 44.272 598.509 42.88 592.749 42.88C585.261 42.88 579.213 45.472 574.605 50.656C569.997 55.744 567.693 62.992 567.693 72.4C567.693 81.904 569.997 89.248 574.605 94.432C579.213 99.616 585.261 102.208 592.749 102.208C598.509 102.208 603.309 100.864 607.149 98.176C610.989 95.488 613.629 91.648 615.069 86.656H629.181C627.069 94.72 622.845 101.2 616.509 106.096C610.173 110.896 602.253 113.296 592.749 113.296C585.261 113.296 578.589 111.616 572.733 108.256C566.973 104.896 562.461 100.144 559.197 94C555.933 87.856 554.301 80.656 554.301 72.4Z" stroke="#FBA304" stroke-width="5" mask="url(#path-1-outside-1)"/>
+<path d="M685.834 31.648C691.786 31.648 697.162 32.944 701.962 35.536C706.762 38.032 710.506 41.824 713.194 46.912C715.978 52 717.37 58.192 717.37 65.488V112H704.41V67.36C704.41 59.488 702.442 53.488 698.506 49.36C694.57 45.136 689.194 43.024 682.378 43.024C675.466 43.024 669.946 45.184 665.818 49.504C661.786 53.824 659.77 60.112 659.77 68.368V112H646.666V5.44H659.77V44.32C662.362 40.288 665.914 37.168 670.426 34.96C675.034 32.752 680.17 31.648 685.834 31.648Z" stroke="#FBA304" stroke-width="5" mask="url(#path-1-outside-1)"/>
+</svg>
+
+   </a>
+
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+	
+	<li class="nav-item active" style="margin-left:270px">
+        <a class="btn btn-info" href="documentaion"> About us <i class="fa fa-info-circle" style="margin-left: 5px;"></i> </a>
+      </li>
+      
+	  <li class="nav-item active" style="margin-left:60px">
+        <a class="btn btn-info" href="recherche">Rechercher <i class="fa fa-search" style="margin-left: 5px;"></i></a>
+      </li>
+
+      <li class="nav-item active" style="margin-left:60px">
+        <a class="btn btn-info" href="deposerArticle" >Déposer un article <i class="fa fa-plus-circle" style="margin-left: 5px;"></i></a>
+      </li>
+
+      <li class="nav-item">
+	  <a class="btn btn-outline-primary my-2 my-sm-0" target="resultat" data-toggle="modal" href="#myModalConnexion"  style="margin-left:330px">Connexion</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+<!-- Traitement -->
+<!-- Si le login ou mot de passe est vide ou incorrecte-->
+<!-- Connexion User model -->
+<div class="modal" id="myModalConnexion" style="margin-top:100px"> 
+  <form action="/ConnexionMembre" method="POST">
+	 <div class="modal-dialog">    
+	 	<div class="modal-content">
+      		<!-- Modal Header -->
+   			<div class="modal-header">  
+   				<h4 class="modal-title" style="margin-left:160px;color:#fba304">Connexion</h4></center>
+   				<button type="button" class="close" data-dismiss="modal">&times;</button> 
+   			</div>
+     		<!-- Modal body -->
+      		<div class="modal-body">	
+      				<div class="form-group">  
+      					<label for="emailConnexion">Login :</label> 
+      					<input type="email" class="form-control" placeholder="Entrez votre login" name="login" required/>
+      				</div>
+          			<div class="form-group">  
+          				<label for="pwdConnexion">Mot de passe :</label>
+          				<input type="password" class="form-control" placeholder="Entrez votre mot de passe" name="pwd" required/> 
+            			<a href="#" style="font-size:10px">Mot de pase oublié</a><br><br>
+            			<a href="#myModalConnexionAdmin" style="text-decoration:none;font-size:13px" data-toggle="modal" data-dismiss="modal">Je sius un administrateur</a><br>
+            			<a href="#myModalInscription" style="text-decoration:none;font-size:13px"data-toggle="modal" data-dismiss="modal">Je suis un nouveau membre</a>   
+          			</div>
+          			<div>
+					</div>
+			</div>
+     	    <!-- Modal footer -->
+      		<div class="modal-footer"> 
+      			<button type="submit" class="btn btn-primary" name="bouton1" value="connecter" >Se connecter</button> 
+      		</div>
+      	</div>  
+     </div>
+  </form> 
+</div>
+    
+    <!-- ConnexionAdmin model -->
+<div class="modal" id="myModalConnexionAdmin" style="margin-top:100px"> 
+  <form method="post" action="PagePrincipale">
+	 <div class="modal-dialog">    
+	 	<div class="modal-content">
+      		<!-- Modal Header -->
+   			<div class="modal-header">  
+   				<h4 class="modal-title" style="margin-left:110px;color:#fba304">Connexion d'un admin</h4>  
+   				<button type="button" class="close" data-dismiss="modal">&times;</button> 
+   			</div>
+     		<!-- Modal body -->
+      		<div class="modal-body">	
+      				<div class="form-group">  
+      					<label for="emailConnexionAdmin">Login :</label> 
+      					<input type="email" class="form-control" placeholder="Entrez votre login" name="emailConnexionAdmin" id="emailConnexionAdmin" required>
+      				</div>
+          			<div class="form-group">  
+          				<label for="pwdConnexionAdmin">Mot de passe :</label>
+          				<input type="password" class="form-control" placeholder="Entrez votre mot de passe" name="pwdConnexionAdmin" id="pwdConnexionAdmin"required> 
+        			</div>
+          			<div>
+					</div>
+			</div>
+     	    <!-- Modal footer -->
+      		<div class="modal-footer"> 
+      			<button type="submit" class="btn btn-primary" name="bouton1" value="connecterAdmin" >Se connecter</button> 
+      		</div>
+      	</div>  
+     </div>
+  </form> 
+</div>
+
+ <!-- Inscription model -->
+<div class="modal" id="myModalInscription">  
+  <form method="post" action="PagePrincipale">
+	<div class="modal-dialog modal-dialog-scrollable">    
+		<div class="modal-content">
+      		<!-- Modal Header -->
+      		<div class="modal-header">  
+      		<h4 class="modal-title" style="margin-left:160px;color:#fba304">Inscription</h4>  
+      		<button type="button" class="close" data-dismiss="modal">&times;</button> 
+      		</div>
+      		<!-- Modal body -->
+      		<div><p style="margin-left:20px;text-size:30px;">Veuillez remplir tout les champs suivant pour s'inscrire</p></div>
+      		<div class="modal-body">	
+      			<div class="form-group">  
+      				<label for="sexe">Civilité :</label>
+          			<label class="radio-inline"><input type="radio" name="sexe" id="sexe" value="F" checked style="margin-left:30px;margin-right:8px;">F</label>
+          			<label class="radio-inline"><input type="radio" name="sexe" id="sexe" value="M" style="margin-right:8px;margin-left:120px;">M</label>
+      			</div>
+      			<div class="form-group">  <label for="nomInscription">Nom :</label> <input type="text" class="form-control" placeholder="Entrez votre nom" name="nomInscription" id="nomInscription" required></div>
+     			<div class="form-group">  <label for="prenomInscription">Prénom :</label><input type="text" class="form-control" placeholder="Entrez votre prénom" name="prenomInscription" id="prenomInscription" required></div>
+      	  		<div class="form-group">  <label for="loginInscription">Login :</label> <input type="text" class="form-control" placeholder="Entrez votre login" name="loginInscription" id="loginInscription" required></div>
+          		<div class="form-group">  <label for="pwdInscription">Mot de passe :</label><input type="password" class="form-control" placeholder="Entrez votre mot de passe" name="pwdInscription" id="pwdInscription" required></div>
+          		<div class="form-group">  <label for="t�lInscription">N° de téléphone :</label><input type="number" class="form-control" placeholder="Entrez votre numéro de téléphone" name="telInscription" id="telInscription" required></div>
+                <div class="form-group">  <label for="photo"> Parcourir votre photo:</label>
+                <div class="custom-file"> 
+                     <input type="file" class="custom-file-input" id="photoInscription" name="photoInscription" accept="image/png, image/jpg"required>
+                     <label class="custom-file-label" for="photoInscription">Votre photo</label>
+                </div>
+                <div>
+                </div>
+           </div>	
+     	  <!-- Modal footer -->
+           <div class="modal-footer"> 
+      			<button type="submit" class="btn btn-primary" name="bouton1" value="inscription" >Se connecter</button> 
+      		</div>    	
+      </div>  
+   </div>
+ </form> 
+</div>
+</div>
+</body>
+</HTML>
